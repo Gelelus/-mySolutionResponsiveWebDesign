@@ -1,0 +1,150 @@
+<html>
+<head>
+</head>
+<body>
+<header>
+  <h1 id="title">Tomorrow's weather generator</h1>
+  <p id="description">you can order any weather you like</p>
+</header>
+<main>
+  <form id = 'survey-form'>
+    <div>
+      <label for = "name" id="name-label">Name:<br/>
+        <input type= "text" id ='name' placeholder = "Enter your name" name = 'name' required /> 
+      </label>
+      <label for = "email" id="email-label">Email:<br/>
+        <input type= "email" id="email" placeholder = "Enter your email" name = 'email' required /> 
+      </label>
+      <label for = "number" id="number-label">Tomorrow's temperature:<br/>
+        <input type= "number" min='-30' max='30' id="number" placeholder = "Enter  temperature" name = 'number' required /> 
+      </label>
+   </div>
+   <div class ='select'>
+     <p>Select precipitation and season of the year</p>
+     <select id="dropdown">
+       <option disabled selected>Select level</option>
+       <option value="low">Low</option>
+       <option value="average">Average</option>
+       <option value="high">High</option>
+     <select>
+   </div>
+    <div class ='select'>
+    
+     <label><input  type="radio" name="level" />Winter</label>
+     <label><input  type="radio" name="level" />Spring</label>
+     <label><input  type="radio" name="level" />Summer</label>
+     <label><input  type="radio" name="level" />Winter</label>
+   </div>
+   <div class ='checkboxes'>
+     <p>What new options for generating the weather would you like to see?</p>
+     <label><input type="checkbox"  name="newOptions">Solar Radiation and Photosynthetically Active Radiation</label>
+     <label><input type="checkbox"  name="newOptions">Barometric Pressure</label>
+     <label><input type="checkbox"  name="newOptions">Humidity</label>
+     <label><input type="checkbox"  name="newOptions">Wind Speed and Direction</label>
+   </div>  
+   <div class ='last'> 
+    <label for="comment">Any additional preferences? </label><br />
+    <textarea id="comments" name="comment" placeholder="Write your additional preferences for tomorrow's weather here..."></textarea>
+   </div>
+   <div> 
+    <button type="submit" id="submit">Submit</button>
+   <div> 
+  </form>  
+</main>
+<style>
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image:linear-gradient(
+       	rgb(192,192,192,0.7),
+      rgba(136, 136, 206, 0.7)
+    ),url(https://raw.githubusercontent.com/Gelelus/-mySolutionResponsiveWebDesign/master/wheather3.jpg);
+}
+body{
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.4;
+  font-family: 'Cinzel Decorative';
+  color: #333;
+
+}
+header {
+ text-align: center;
+ font-size: 2rem;
+ text-shadow: 2px 2px 10px black;
+}
+input, button, select, textarea {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+main{
+  background: rgb(192,192,192,0.6);
+  text-align: center;
+  box-shadow: 2px 2px 10px black;
+  border: 1px solid rgb(192,192,192);
+  border-radius:1.2em;
+  width:60%;
+  margin:0 auto;
+  padding: 2.5rem;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+.select{
+  background: rgb(133,159,174,0.2);
+  border-radius: 0 0 0 1.1em;
+  
+}
+.select p{
+  margin:0;
+}
+#name-label,#email-label,#number-label{
+  padding: 1.5em;
+  display: inline-block;
+  text-align:left;
+}
+#name,#email,#number,#dropdown {
+  width: 100%;
+  height: 2.8rem;
+  padding: 0.375rem 0.75rem;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+}
+
+.checkboxes {
+  padding: 1.5rem 0.75rem;
+  display:flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.last{
+  text-align:left
+}
+#comments{
+  min-height: 120px;
+  width: 100%;
+  padding: 0.625rem;
+  resize: vertical;
+  margin-bottom:1.2em
+}
+#submit{
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  background: silver;
+  color: inherit;
+  border-radius: 20px;
+  cursor: pointer;
+}
+</style>
+</body>
+</html>

@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+<style>
+
+
+body{
+  margin:0;
+  padding:0;
+  background:#ffffff;
+  font-family: "Lato", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Verdana, Tahoma, sans-serif;
+color:
+#333;
+}
+
+#container{
+  border: 1px solid #ccc;
+  background:#e5e5e5;
+  margin-left: 200px;
+  min-height: 1920px;
+}
+#page-header h1{
+   margin:0;
+   padding:1em;
+}
+section header {
+font-weight: 700;
+font-size:1.5em;
+}
+.line{
+  border: 1px solid #ccc;
+  height: 50px;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.5), 0 3px 6px -3px rgba(0,0,0,0.25);
+  background:linear-gradient(90deg, #ccc 0%, #e4e4e4 100%);
+}
+#navbar{
+ position: fixed;
+ width:200px;
+ top:0;
+ left:0;
+ background:#e5e5e5;
+ border: 1px solid #ccc;
+ height: 100%;
+}
+#navbar ul{
+
+  list-style: none;
+  margin: .9rem 0 .5rem;
+  padding:0;
+  font-size: 1rem;
+  overflow-wrap: break-word;
+  font-variant-ligatures: none;
+}
+
+#navbar li{
+    padding-left: 1.25rem;
+    margin-bottom: .5rem;
+    padding-bottom: .5rem;
+    border-bottom: 1px solid #ccc;
+}
+.nav-link{
+  text-decoration:none;
+  color:inherit;
+}
+.headli{
+font-weight: 700;
+font-size:1.5em;
+}
+.main-section{
+ margin:1em 0 1em 1em;
+}
+.code{
+padding-left:1em;
+width:500px;
+border-radius:5px;
+background:white;
+}
+@media only screen and (max-width: 800px) {
+  #navbar{
+   position: absolute;
+   top:6.9em;
+   left:-0.6em;
+   height: auto;
+   background: transparent;
+   border: none;
+   width:100%;
+  }
+  #first-line{
+    height: 70px;
+  }
+  .headli{
+    display:none;
+  }
+  #navbar ul{
+   font-size: 0.8em;
+   display: flex;
+   justify-content: space-around;
+   flex-wrap:wrap;
+  }
+  #navbar li{
+   border: none;
+  }
+  #container {
+  margin-left: 0;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+#first-line{
+    height: 100px;
+  }
+  .code{
+  width:auto;
+  margin-right: 10px;
+  }
+
+}
+</style>
+</head>
+<body>
+<div id = 'container'>
+  <nav id = "navbar">
+    <ul>
+      <li class='headli'><header>JS Docs</header></li>
+      <li><a class="nav-link" href="#Js">What is JavaScript?</a></li>
+      <li><a class="nav-link" href="#statements">Statements</a></li>
+      <li><a class="nav-link" href="#semicolons">Semicolons</a></li>
+      <li><a class="nav-link" href="#comments">Comments</a></li>
+      <li><a class="nav-link" href="#variables">Variables</a></li>
+      <li><a class="nav-link" href="#variable_naming">Variable naming</a></li>
+      <li><a class="nav-link" href="#reference">Reference</a></li>
+    </ul>
+  </nav>
+
+<main id="main-doc">
+<header id ='page-header'>
+  <h1>The tex docs</h1>
+</header>
+<div id = 'first-line' class ='line'></div>
+
+   <section class ='main-section'  id ="Js">
+   
+   <header>What is JavaScript?</header>  
+     <p>JavaScript was initially created to “make web pages alive”.</p>
+     <p>The programs in this language are called scripts. They can be written right in a web page’s HTML and run automatically as the page loads.</p>
+     <p>Scripts are provided and executed as plain text. They don’t need special preparation or compilation to run.</p>
+     <p>In this aspect, JavaScript is very different from another language called Java.</p>
+     <p >Today, JavaScript can execute not only in the browser, but also on the server, or actually on any device that has a special program called the JavaScript engine.</p>
+     <p>The browser has an embedded engine sometimes called a “JavaScript virtual machine”.</p>
+     <p>Different engines have different “codenames”. For example:</p>
+       <ul>
+        <li>V8 – in Chrome and Opera.</li>
+        <li> SpiderMonkey – in Firefox.</li>
+        <li> …There are other codenames like “Trident” and “Chakra” for different versions of IE, “ChakraCore” for Microsoft Edge, “Nitro” and “SquirrelFish” for Safari, etc.</li>
+     </ul>
+     <p>The terms above are good to remember because they are used in developer articles on the internet. We’ll use them too. For instance, if “a feature X is supported by V8”, then it probably works in Chrome and Opera.</p>
+  
+  </section>
+
+<div class = 'line'></div>
+  
+   
+   
+   <section class ='main-section' id ="statements">
+     <header>Statements</header>  
+     <p>Statements are syntax constructs and commands that perform actions.</p>
+     <p>You've probably already seen a statement, alert('Hello, world!'), which shows the message “Hello, world!”.</p>
+     <p>We can have as many statements in our code as we want. Statements can be separated with a semicolon.</p>
+     <p>For example, here we split “Hello World” into two alerts:</p>
+     <p class='code'><code>alert('Hello'); alert('World');</code></p>
+     <p>Usually, statements are written on separate lines to make the code more readable:</p>
+     <p class='code'><code>alert('Hello');<br />alert('World');</code></p>
+     
+   </section>
+   <section class ='main-section' id ="semicolons">
+   <header>Semicolons</header>  
+     <p>A semicolon may be omitted in most cases when a line break exists.</p>
+     <p>This would also work:</p>
+     <p class='code'><code> alert('Hello')<br /> alert('World')</code></p>
+     <p>Here, JavaScript interprets the line break as an “implicit” semicolon. This is called an automatic semicolon insertion.
+</p>
+     <p>In most cases, a newline implies a semicolon. But “in most cases” does not mean “always”!</p>
+     <p>There are cases when a newline does not mean a semicolon. For example:</p>
+     <p class='code'><code>alert(3 +<br />1<br />+ 2);</code></p>
+     <p>The code outputs 6 because JavaScript does not insert semicolons here. It is intuitively obvious that if the line ends with a plus "+", then it is an “incomplete expression”, so the semicolon is not required. And in this case that works as intended.</p>
+     <p>But there are situations where JavaScript “fails” to assume a semicolon where it is really needed.</p>
+     <p>Errors which occur in such cases are quite hard to find and fix.</p>
+     <p>We recommend putting semicolons between statements even if they are separated by newlines. This rule is widely adopted by the community. Let’s note once again – it is possible to leave out semicolons most of the time. But it’s safer – especially for a beginner – to use them.</p>
+   </section>
+   
+   <div class = 'line'></div>
+<section class ='main-section' id ="comments">
+     <header>Comments</header>  
+     <p>As time goes on, programs become more and more complex. It becomes necessary to add comments which describe what the code does and why.</p>
+     <p>Comments can be put into any place of a script. They don’t affect its execution because the engine simply ignores them.</p>
+     <p>One-line comments start with two forward slash characters //.</p>
+     <p>The rest of the line is a comment. It may occupy a full line of its own or follow a statement.</p>
+     <p>Like here:</p>
+     <p class='code'><code>// This comment occupies a line of its own<br />
+      alert('Hello');</code></p>
+     <p class='code'><code>alert('World'); // This comment follows the statement</code></p>
+     <p>Multiline comments start with a forward slash and an asterisk /* and end with an asterisk and a forward slash */.</p>
+     <p>Like this:</p>
+     <p class='code'><code>/* An example with two messages.<br />
+       This is a multiline comment.<br />
+         */<br />
+alert('Hello');<br />
+alert('World');</code></p>
+     <p>The content of comments is ignored, so if we put code inside /* … */, it won’t execute.</p>
+     <p>Sometimes it can be handy to temporarily disable a part of code:</p>
+     <p class='code'><code>/* Commenting out the code<br />
+alert('Hello');><br />
+*/<br />
+alert('World');</code></p>
+<p>Don’t hesitate to comment your code.</p>
+
+<p>Comments increase the overall code footprint, but that’s not a problem at all. There are many tools which minify code before publishing to a production server. They remove comments, so they don’t appear in the working scripts. Therefore, comments do not have negative effects on production at all.</p>
+   </section>
+   <div class = 'line'></div>
+    <section class ='main-section' id = 'variables'>
+     <header>Variables</header>  
+     <p>Most of the time, a JavaScript application needs to work with information. Here are two examples:</p>
+     <ol>
+        <li>An online shop – the information might include goods being sold and a shopping cart.</li>
+        <li> A chat application – the information might include users, messages, and much more.</li>
+     </ol>
+     <p>Variables are used to store this information.</p>
+     <p>A variable is a “named storage” for data. We can use variables to store goodies, visitors, and other data.</p>
+     <p>To create a variable in JavaScript, use the let keyword.</p>
+     <p >The statement below creates (in other words: declares) a variable with the name “message”:</p>
+     <p>Usually, statements are written on separate lines to make the code more readable:</p>
+     <p class='code'><code>let message;</code></p>
+     <p>Now, we can put some data into it by using the assignment operator =:</p>
+     <p class='code'><code>let message;<br />
+message = 'Hello'; // store the string</code></p>
+     <p>The string is now saved into the memory area associated with the variable. We can access it using the variable name:</p>
+     <p class='code'><code>let message;<br />
+message = 'Hello!';<br />
+
+alert(message); // shows the variable content</code></p>
+     <p>To be concise, we can combine the variable declaration and assignment into a single line:</p>
+     <p class='code'><code>let message = 'Hello!'; // define the variable and assign the value<br />
+alert(message); // Hello!</code></p>
+     <p>We can also declare multiple variables in one line:</p>
+     <p class='code'><code>let message;</code></p>
+     <p class='code'><code>let user = 'John', age = 25, message = 'Hello';</code></p>
+     <p>That might seem shorter, but we don’t recommend it. For the sake of better readability, please use a    single line per variable.</p>
+     <p>The multiline variant is a bit longer, but easier to read:</p>
+     <p class='code'><code>let user = 'John';<br />
+let age = 25;<br />
+let message = 'Hello';
+</code></p>
+    <p>Some people also define multiple variables in this multiline style:</p>
+    <p class='code'><code>let user = 'John',
+  age = 25,<br />
+  message = 'Hello';<br />
+</code></p>
+<p>…Or even in the “comma-first” style:</p>
+<p  class='code'><code>let user = 'John'<br />
+  , age = 25<br />
+  , message = 'Hello';;</code></p>
+<p>Technically, all these variants do the same thing. So, it’s a matter of personal taste and aesthetics.</p>
+   </section>
+ <div class = 'line'></div>
+   <section class ='main-section' id ="variable_naming">
+     <header>Variable naming</header>  
+     <p>There are two limitations on variable names in JavaScript:</p>
+     <ol>
+        <li>The name must contain only letters, digits, or the symbols $ and _.</li>
+        <li>The first character must not be a digit.</li>
+     </ol>
+     <p>Examples of valid names:</p>
+     <p class='code'><code>let userName;<br />let test123;</code></p></p>
+     <p>When the name contains multiple words, camelCase is commonly used. That is: words go one after another, each word except first starting with a capital letter: myVeryLongName.</p>
+     <p>What’s interesting – the dollar sign '$' and the underscore '_' can also be used in names. They are regular symbols, just like letters, without any special meaning.
+     </p>
+     <p>These names are valid:</p>
+     <p class='code'><code>let $ = 1; // declared a variable with the name "$"<br />
+let _ = 2; // and now a variable with the name "_"</code></p>
+     <p class='code'><code>alert($ + _); // 3</code></p>
+     <p>Examples of incorrect variable names:</p>
+     <p class='code'><code>let 1a; // cannot start with a digit<br />
+   let my-name; // hyphens '-' aren't allowed in the name</code></p>
+     <p>It is possible to use any language, including cyrillic letters or even hieroglyphs, like this:</p>
+     <p class='code'><code>let имя = '...';<br />
+let 我 = '...';</code></p>
+     <p>Technically, there is no error here, such names are allowed, but there is an international tradition to use English in variable names. Even if we’re writing a small script, it may have a long life ahead. People from other countries may need to read it some time.</p>
+     <p>There is a list of reserved words, which cannot be used as variable names because they are used by the language itself.</p>
+     <p>For example: let, class, return, and function are reserved.</p>
+     <p>The code below gives a syntax error:</p>
+     <p class='code'><code>let let = 5; // can't name a variable "let", error!<br />
+let return = 5; // also can't name it "return", error!</code></p>
+   </section>
+ 
+   <div class = 'line'></div>
+   
+   <section class ='main-section' id ="reference">
+ <header>Reference</header>
+       <ul>
+        <li>
+          All the information in this page is taken from <a href="https://javascript.info/" target="_blank">javascript.info</a>
+        </li>
+      </ul>
+   
+    </section>
+</main>
+</div id = 'container'>
+</body>
+</html>
